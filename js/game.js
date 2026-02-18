@@ -48421,7 +48421,7 @@ var initGame = function () {
       jg = function (a, b) {
         0 != a.i && (a.kb = b);
       },
-      lg = function (a, b, c) {
+      lg = function (a, b, c) { // NOTE: Force of space bar
         2 == a.i &&
           (kg(a, !0),
           (a.V.x += b.x),
