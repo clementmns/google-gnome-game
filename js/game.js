@@ -47982,6 +47982,7 @@ var initGame = function () {
       void 0 === a && (a = 0);
       if (this.vj < a && 1 - this.vj > Number.MIN_VALUE) {
         var b = (a - this.vj) / (1 - this.vj);
+        b = 1;
         this.yj.x = (1 - b) * this.yj.x + b * this.c.x;
         this.yj.y = (1 - b) * this.yj.y + b * this.c.y;
         this.Qp = (1 - b) * this.Qp + b * this.a;
