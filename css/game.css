@@ -8,6 +8,7 @@
   -webkit-tap-highlight-color: transparent;
   -webkit-user-select: none;
 }
+
 #gameOverlay {
   position: absolute;
   top: 0;
