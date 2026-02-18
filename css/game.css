@@ -1,4 +1,6 @@
 #game {
+  height: 216px;
+  width: 384px;
   outline: none;
   position: relative;
   -moz-user-select: -moz-none;
@@ -25,6 +27,10 @@
   display: none;
 }
 
+#fpdoodle #game {
+  height: 360px;
+  width: 640px;
+}
 #fpdoodle {
   background: #000;
 }
