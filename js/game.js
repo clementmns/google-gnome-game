@@ -50926,7 +50926,7 @@ var initGame = function () {
       H.call(this);
       this.cq = a;
       this.H = new ii(a);
-      this.T = new oi(0, new dd(-100, -200, 3e3, 250));
+      this.T = new oi(0, new dd(-100, -200, 1e5, 250)); //
       this.i(this.T);
       this.v.setTransform(1, 0, 0, 1, 0, 0);
     };
@@ -53576,7 +53576,7 @@ var initGame = function () {
     };
     var Ko = function (a, b) {
       var c = E(0, 0);
-      c = new Jo(a, c, 3e3, b);
+      c = new Jo(a, c, 1e5, b); // Etend le rendu viseul du sol { position: b, width: c, height: d }
       c.Wu();
       return c;
     };
@@ -54656,7 +54656,7 @@ var initGame = function () {
     };
     var wp = function () {
       var a = E(0, -4.2);
-      a = new vp(a, 1e3, 3.7);
+      a = new vp(a, 7e3, 3.7); // NOTE: Etend le background { position: a, width: b, height: c }
       a.Wu();
       return a;
     };
@@ -54899,7 +54899,7 @@ var initGame = function () {
     };
     var Jp = function () {
         var a = E(0, -600);
-        a = new Ip(a, 1e3, 500);
+        a = new Ip(a, 1e6, 500);
         a.Wu();
         return a;
       },
@@ -55412,7 +55412,6 @@ var initGame = function () {
         b.innerText = c;
         a.i.appendChild(b);
         a.i.appendChild(a.v);
-        // TODO: load spirits according to device
         a.V = isMobile
           ? new W(
               [
@@ -56181,9 +56180,9 @@ var initGame = function () {
           e = [],
           f = [];
         d.push({ x: -20, y: 22.7, height: 1.2 });
-        for (var g = 0, h = 0; 60 > h; h++) {
+        for (var g = 0, h = 0; 225 > h; h++) { // Generation des segments de terrain
           for (
-            var k = 2e3 < g ? zn : An[h % An.length], l = g, m = !1, q = l;
+            var k = g % 7e3 > 3e3 && g % 7e3 < 4e3 ? zn : An[h % An.length], l = g, m = !1, q = l; // Terrain cyclique de 7000 en 7000 : normal (0-3000), fin (3000-4000), normal (4000-7000), puis recommence
             q < l + k.length;
             q += k.wu
           )
